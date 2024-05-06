@@ -31,24 +31,24 @@
             this.pnWorkoutBuilder = new System.Windows.Forms.Panel();
             this.pnHomepage = new System.Windows.Forms.Panel();
             this.pn2 = new System.Windows.Forms.Panel();
-            this.pn3 = new System.Windows.Forms.Panel();
+            this.pnExcercises = new System.Windows.Forms.Panel();
             this.btNewWorkout = new System.Windows.Forms.Button();
             this.btWorkoutAddExercise = new System.Windows.Forms.Button();
             this.btHomepage = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btExcercises = new System.Windows.Forms.Button();
+            this.btWorkout = new System.Windows.Forms.Button();
             this.btSchedule = new System.Windows.Forms.Button();
             this.btSharing = new System.Windows.Forms.Button();
             this.btWorkoutBuilder = new System.Windows.Forms.Button();
-            this.pn4 = new System.Windows.Forms.Panel();
+            this.pnWorkout = new System.Windows.Forms.Panel();
             this.pnSchedule = new System.Windows.Forms.Panel();
             this.pnSharing = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnWorkoutBuilder.SuspendLayout();
             this.pnHomepage.SuspendLayout();
             this.pn2.SuspendLayout();
-            this.pn4.SuspendLayout();
+            this.pnWorkout.SuspendLayout();
             this.pnSchedule.SuspendLayout();
             this.pnSharing.SuspendLayout();
             this.SuspendLayout();
@@ -73,18 +73,18 @@
             // 
             // pn2
             // 
-            this.pn2.Controls.Add(this.pn3);
+            this.pn2.Controls.Add(this.pnExcercises);
             this.pn2.Location = new System.Drawing.Point(0, 0);
             this.pn2.Name = "pn2";
             this.pn2.Size = new System.Drawing.Size(798, 426);
             this.pn2.TabIndex = 4;
             // 
-            // pn3
+            // pnExcercises
             // 
-            this.pn3.Location = new System.Drawing.Point(0, 0);
-            this.pn3.Name = "pn3";
-            this.pn3.Size = new System.Drawing.Size(798, 426);
-            this.pn3.TabIndex = 5;
+            this.pnExcercises.Location = new System.Drawing.Point(0, 0);
+            this.pnExcercises.Name = "pnExcercises";
+            this.pnExcercises.Size = new System.Drawing.Size(798, 426);
+            this.pnExcercises.TabIndex = 5;
             // 
             // btNewWorkout
             // 
@@ -127,25 +127,25 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btExcercises
             // 
-            this.button3.Location = new System.Drawing.Point(214, 1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 24);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btExcercises.Location = new System.Drawing.Point(214, 1);
+            this.btExcercises.Name = "btExcercises";
+            this.btExcercises.Size = new System.Drawing.Size(101, 24);
+            this.btExcercises.TabIndex = 3;
+            this.btExcercises.Text = "Excercises";
+            this.btExcercises.UseVisualStyleBackColor = true;
+            this.btExcercises.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btWorkout
             // 
-            this.button4.Location = new System.Drawing.Point(321, 1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 24);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btWorkout.Location = new System.Drawing.Point(321, 1);
+            this.btWorkout.Name = "btWorkout";
+            this.btWorkout.Size = new System.Drawing.Size(101, 24);
+            this.btWorkout.TabIndex = 4;
+            this.btWorkout.Text = "Workout";
+            this.btWorkout.UseVisualStyleBackColor = true;
+            this.btWorkout.Click += new System.EventHandler(this.button4_Click);
             // 
             // btSchedule
             // 
@@ -178,13 +178,13 @@
             this.btWorkoutBuilder.UseVisualStyleBackColor = true;
             this.btWorkoutBuilder.Click += new System.EventHandler(this.btWorkoutBuilder_Click);
             // 
-            // pn4
+            // pnWorkout
             // 
-            this.pn4.Controls.Add(this.pnSchedule);
-            this.pn4.Location = new System.Drawing.Point(1, 25);
-            this.pn4.Name = "pn4";
-            this.pn4.Size = new System.Drawing.Size(798, 423);
-            this.pn4.TabIndex = 6;
+            this.pnWorkout.Controls.Add(this.pnSchedule);
+            this.pnWorkout.Location = new System.Drawing.Point(1, 25);
+            this.pnWorkout.Name = "pnWorkout";
+            this.pnWorkout.Size = new System.Drawing.Size(798, 423);
+            this.pnWorkout.TabIndex = 6;
             // 
             // pnSchedule
             // 
@@ -216,21 +216,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pn4);
+            this.Controls.Add(this.pnWorkout);
             this.Controls.Add(this.btWorkoutBuilder);
             this.Controls.Add(this.btSharing);
             this.Controls.Add(this.btSchedule);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btWorkout);
+            this.Controls.Add(this.btExcercises);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btHomepage);
             this.Controls.Add(this.pnWorkoutBuilder);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FitnessApp";
             this.pnWorkoutBuilder.ResumeLayout(false);
             this.pnHomepage.ResumeLayout(false);
             this.pn2.ResumeLayout(false);
-            this.pn4.ResumeLayout(false);
+            this.pnWorkout.ResumeLayout(false);
             this.pnSchedule.ResumeLayout(false);
             this.pnSharing.ResumeLayout(false);
             this.pnSharing.PerformLayout();
@@ -243,8 +243,8 @@
         private System.Windows.Forms.Panel pnWorkoutBuilder;
         private System.Windows.Forms.Button btHomepage;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btExcercises;
+        private System.Windows.Forms.Button btWorkout;
         private System.Windows.Forms.Button btSchedule;
         private System.Windows.Forms.Button btSharing;
         private System.Windows.Forms.Button btWorkoutBuilder;
@@ -252,8 +252,8 @@
         private System.Windows.Forms.Button btNewWorkout;
         private System.Windows.Forms.Panel pnHomepage;
         private System.Windows.Forms.Panel pn2;
-        private System.Windows.Forms.Panel pn3;
-        private System.Windows.Forms.Panel pn4;
+        private System.Windows.Forms.Panel pnExcercises;
+        private System.Windows.Forms.Panel pnWorkout;
         private System.Windows.Forms.Panel pnSchedule;
         private System.Windows.Forms.Panel pnSharing;
         private System.Windows.Forms.Label label1;
