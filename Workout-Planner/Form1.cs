@@ -14,12 +14,13 @@ namespace Workout_Planner
 {
     public partial class Form1 : Form
     {
-        string[] name = {"Ladzug", "Hose hochziehen"};
-        string[] reps = {"8-10","12-14"};
-        double[] weight = { 75, 10 };
-        string[] tempo = { "2.2.4","2.4.2" };
-        string[] description = {"Ladzug Maschine viel hilft viel","Hosenstall zu machen"};
-        string workoutName = "Fett weg";
+        public string[] name = {"Ladzug", "Hose hochziehen"};
+        public string[] reps = {"8-10","12-14"};
+        public double[] weight = { 75, 10 };
+        public string[] tempo = { "2.2.4","2.4.2" };
+        public string[] description = {"Ladzug Maschine viel hilft viel","Hosenstall zu machen"};
+        public string workoutName = "Fett weg";
+        int selectedTab = 0;
         WorkoutBuilder workoutBuilder = new WorkoutBuilder();
         public Form1()
         {
@@ -28,7 +29,8 @@ namespace Workout_Planner
 
         private void btWorkoutBuilder_Click(object sender, EventArgs e)
         {
-
+            selectedTab = 6;
+            showTab(selectedTab);
         }
 
         private void btWorkoutAddExercise_Click(object sender, EventArgs e)
@@ -44,6 +46,215 @@ namespace Workout_Planner
             workoutBuilder.createWorkout(workoutName);
             string messagebox = workoutBuilder.outputAllKeys(allKeysWorkout,WorkoutBuilder.Workout);
             MessageBox.Show(messagebox);
+        }
+        private void showTab(int input)
+        {
+            switch (input)
+            {
+                case 0:
+                    pnHomepage.Show();
+                    btHomepage.BackColor = Color.LightBlue;
+
+                    pn2.Hide();
+                    button2.BackColor = Color.White;
+                    button2.ForeColor = Color.Black;
+                    pn3.Hide();
+                    button3.BackColor = Color.White;
+                    button3.ForeColor = Color.Black;
+                    pn4.Hide();
+                    button4.BackColor = Color.White;
+                    button4.ForeColor = Color.Black;
+                    pnSchedule.Show();
+                    btSchedule.BackColor = Color.White;
+                    btSchedule.ForeColor = Color.Black;
+                    pnSharing.Hide();
+                    btSharing.BackColor = Color.White;
+                    btSharing.ForeColor = Color.Black;
+                    pnWorkoutBuilder.Hide();
+                    btWorkoutBuilder.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+
+                    break;
+                case 1:
+                    pn2.Show();
+                    button2.BackColor = Color.LightBlue;
+
+                    pnHomepage.Hide();
+                    btHomepage.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    pn3.Hide();
+                    button3.BackColor = Color.White;
+                    button3.ForeColor = Color.Black;
+                    pn4.Hide();
+                    button4.BackColor = Color.White;
+                    button4.ForeColor = Color.Black;
+                    pnSchedule.Hide();
+                    btSchedule.BackColor = Color.White;
+                    btSchedule.ForeColor = Color.Black;
+                    pnSharing.Hide();
+                    btSharing.BackColor = Color.White;
+                    btSharing.ForeColor = Color.Black;
+                    pnWorkoutBuilder.Hide();
+                    btWorkoutBuilder.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    break;
+                case 2:
+                    pn3.Show();
+                    button3.BackColor = Color.LightBlue;
+
+                    pnHomepage.Hide();
+                    btHomepage.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    pn2.Hide();
+                    button2.BackColor = Color.White;
+                    button2.ForeColor = Color.Black;
+                    pn4.Hide();
+                    button4.BackColor = Color.White;
+                    button4.ForeColor = Color.Black;
+                    pnSchedule.Show();
+                    btSchedule.BackColor = Color.White;
+                    btSchedule.ForeColor = Color.Black;
+                    pnSharing.Hide();
+                    btSharing.BackColor = Color.White;
+                    btSharing.ForeColor = Color.Black;
+                    pnWorkoutBuilder.Hide();
+                    btWorkoutBuilder.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    break;
+                case 3:
+                    pn4.Show();
+                    button4.BackColor = Color.LightBlue;
+
+                    pnHomepage.Hide();
+                    btHomepage.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    pn2.Hide();
+                    button2.BackColor = Color.White;
+                    button2.ForeColor = Color.Black;
+                    pn3.Hide();
+                    button3.BackColor = Color.White;
+                    button3.ForeColor = Color.Black;
+                    pnSchedule.Show();
+                    btSchedule.BackColor = Color.White;
+                    btSchedule.ForeColor = Color.Black;
+                    pnSharing.Hide();
+                    btSharing.BackColor = Color.White;
+                    btSharing.ForeColor = Color.Black;
+                    pnWorkoutBuilder.Hide();
+                    btWorkoutBuilder.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    break;
+                case 4:
+                    pnSchedule.Show();
+                    btSchedule.BackColor = Color.LightBlue;
+                    
+                    pnHomepage.Hide();
+                    btHomepage.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    pn2.Hide();
+                    button2.BackColor = Color.White;
+                    button2.ForeColor = Color.Black;
+                    pn3.Hide();
+                    button3.BackColor = Color.White;
+                    button3.ForeColor = Color.Black;
+                    pn4.Hide();
+                    button4.BackColor = Color.White;
+                    button4.ForeColor = Color.Black;
+                    pnSharing.Hide();
+                    btSharing.BackColor = Color.White;
+                    btSharing.ForeColor = Color.Black;
+                    pnWorkoutBuilder.Hide();
+                    btWorkoutBuilder.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    break;
+                case 5:
+                    pnSharing.Show();
+                    btSharing.BackColor = Color.LightBlue;
+
+                    pnHomepage.Hide();
+                    btHomepage.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    pn2.Hide();
+                    button2.BackColor = Color.White;
+                    button2.ForeColor = Color.Black;
+                    pn3.Hide();
+                    button3.BackColor = Color.White;
+                    button3.ForeColor = Color.Black;
+                    pn4.Hide();
+                    button4.BackColor = Color.White;
+                    button4.ForeColor = Color.Black;
+                    pnSchedule.Show();
+                    btSchedule.BackColor = Color.White;
+                    btSchedule.ForeColor = Color.Black;
+                    pnWorkoutBuilder.Hide();
+                    btWorkoutBuilder.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    break;
+                case 6:
+                    pnWorkoutBuilder.Show();
+                    btWorkoutBuilder.BackColor = Color.LightBlue;
+
+                    pnHomepage.Hide();
+                    btHomepage.BackColor = Color.White;
+                    btWorkoutBuilder.ForeColor = Color.Black;
+                    pn2.Hide();
+                    button2.BackColor = Color.White;
+                    button2.ForeColor = Color.Black;
+                    pn3.Hide();
+                    button3.BackColor = Color.White;
+                    button3.ForeColor = Color.Black;
+                    pn4.Hide();
+                    button4.BackColor = Color.White;
+                    button4.ForeColor = Color.Black;
+                    pnSchedule.Show();
+                    btSchedule.BackColor = Color.White;
+                    btSchedule.ForeColor = Color.Black;
+                    pnSharing.Hide();
+                    btSharing.BackColor = Color.White;
+                    btSharing.ForeColor = Color.Black;
+                    break;
+            }
+        }
+
+        private void btHomepage_Click(object sender, EventArgs e)
+        {
+            selectedTab = 0;
+            showTab(selectedTab);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            selectedTab = 1;
+            showTab(selectedTab);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            selectedTab = 2;
+            showTab(selectedTab);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            selectedTab = 3;
+            showTab(selectedTab);
+        }
+
+        private void btSchedule_Click(object sender, EventArgs e)
+        {
+            selectedTab = 4;
+            showTab(selectedTab);
+        }
+
+        private void btSharing_Click(object sender, EventArgs e)
+        {
+            selectedTab = 5;
+            showTab(selectedTab);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
